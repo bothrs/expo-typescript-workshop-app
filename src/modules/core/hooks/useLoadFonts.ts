@@ -1,13 +1,9 @@
 import * as Font from 'expo-font'
 import { useEffect, useState } from 'react'
 
-/* --- useLoadFonts() -------------------------------------------------------------------------- */
-
 export const useLoadFonts = () => {
-  // State
   const [fontsLoaded, setFontsLoaded] = useState(false)
 
-  // -- Custom Fonts --
   const customFonts = {
     'Nimbus Sans D OT': require('../../../assets/fonts/Nimbus-Sans-D-OT-Black-Extended_32740.ttf'),
     'Nimbus Sans': require('../../../assets/fonts/Nimbus-Sans-D-OT-Black-Extended_32740.ttf'),
@@ -25,8 +21,6 @@ export const useLoadFonts = () => {
     }
     loadFonts()
   }, [])
-
-  // -- Return --
 
   return fontsLoaded
 }
