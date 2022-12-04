@@ -25,7 +25,14 @@ export const ImageBackground = ({ children, imageSrc }: Props) => {
           <LinearGradient
             start={vec(screenWidth / 2, 0)}
             end={vec(screenWidth / 2, screenHeight)}
-            colors={['transparent', 'transparent ']}
+            colors={[
+              '#18171f76',
+              '#0c0b0f2d',
+              'transparent',
+              'transparent',
+              '#18171fcc',
+            ]}
+            positions={[0, 8.33, 16.15, 59.56, 97.29]}
           />
         </Rect>
       </StCanvas>
