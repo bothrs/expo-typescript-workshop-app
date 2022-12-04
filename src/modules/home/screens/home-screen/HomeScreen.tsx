@@ -1,7 +1,7 @@
 import { useNavigation, useRoute } from '@react-navigation/core'
 import { useEffect, useState } from 'react'
 
-import { CameraButton } from '../../../shared/components/camera-button'
+import { CameraButton } from '../../components/camera-button'
 import { GradientBackground } from '../../../shared/components/gradient-background'
 import { Title } from '../../../shared/components/title'
 
