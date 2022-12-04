@@ -5,9 +5,9 @@ export const useLoadFonts = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false)
 
   const customFonts = {
-    'Nimbus Sans D OT': require('../../../assets/fonts/Nimbus-Sans-D-OT-Black-Extended_32740.ttf'),
-    'Nimbus Sans': require('../../../assets/fonts/Nimbus-Sans-D-OT-Black-Extended_32740.ttf'),
-    'Nimbus-Sans': require('../../../assets/fonts/Nimbus-Sans-D-OT-Black-Extended_32740.ttf'),
+    'Nimbus Sans D OT': require('../../../../assets/fonts/Nimbus-Sans-D-OT-Black-Extended_32740.ttf'),
+    'Nimbus Sans': require('../../../../assets/fonts/Nimbus-Sans-D-OT-Black-Extended_32740.ttf'),
+    'Nimbus-Sans': require('../../../../assets/fonts/Nimbus-Sans-D-OT-Black-Extended_32740.ttf'),
   }
 
   useEffect(() => {
