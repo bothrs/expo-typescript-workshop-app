@@ -1,9 +1,9 @@
 import { useNavigation, useRoute } from '@react-navigation/core'
 import { useEffect, useState } from 'react'
 
-import { CameraButton } from '../../components/camera-button'
 import { GradientBackground } from '../../../shared/components/gradient-background'
 import { Title } from '../../../shared/components/title'
+import { CameraButton } from '../../components/camera-button'
 
 import { StPageView } from './HomeScreen.styled'
 
