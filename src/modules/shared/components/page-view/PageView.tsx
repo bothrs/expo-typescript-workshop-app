@@ -1,6 +1,6 @@
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
-import { StContainer, StContent } from './PageView.styled'
+import { StContainer } from './PageView.styled'
 
 import type { ReactNode } from 'react'
 import type { StyleProp, ViewStyle } from 'react-native'
@@ -18,7 +18,7 @@ export const PageView = ({ children, style }: Props) => {
       style={style}
       insets={{ top: top, bottom: 36 - bottom < 0 ? bottom : 36 }}
     >
-      <StContent>{children}</StContent>
+      {children}
     </StContainer>
   )
 }

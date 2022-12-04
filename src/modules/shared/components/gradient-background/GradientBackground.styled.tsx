@@ -15,6 +15,7 @@ export const StBackgroundImage = styled.ImageBackground`
   width: 100%;
   height: 100%;
   display: flex;
+  flex: 1;
   flex-direction: column;
 `
 

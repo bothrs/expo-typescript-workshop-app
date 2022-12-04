@@ -1,6 +1,13 @@
 import styled from 'styled-components/native'
 
-export const StContainer = styled.View``
+import { PageView } from '../../../shared/components/page-view'
+
+export const StPageView = styled(PageView)`
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+`
 
 export const StBackgroundImage = styled.Image`
   width: 100%;

@@ -1,7 +1,7 @@
 import type { StackNavigationProp } from '@react-navigation/stack'
 
 export type NavigationParameterList = {
-  Home: undefined
+  Home: { hasPostedPhoto: true } | undefined
   Camera: undefined
   UploadPhoto: undefined
 }
