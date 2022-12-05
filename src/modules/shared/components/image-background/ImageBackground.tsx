@@ -26,13 +26,13 @@ export const ImageBackground = ({ children, imageSrc }: Props) => {
             start={vec(screenWidth / 2, 0)}
             end={vec(screenWidth / 2, screenHeight)}
             colors={[
-              '#18171f76',
-              '#0c0b0f2d',
+              'rgba(24, 23, 31, 0.464)',
+              'rgba(12, 11, 15, 0.176)',
               'transparent',
               'transparent',
-              '#18171fcc',
+              'rgba(24, 23, 31, 0.8)',
             ]}
-            positions={[0, 8.33, 16.15, 59.56, 97.29]}
+            positions={[0, 0.0833, 0.1615, 0.5956, 0.9729]}
           />
         </Rect>
       </StCanvas>

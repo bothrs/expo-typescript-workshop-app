@@ -1,3 +1,5 @@
 import styled from 'styled-components/native'
 
-export const StContainer = styled.View``
+export const StSpacing = styled.View`
+  flex: 1;
+`
