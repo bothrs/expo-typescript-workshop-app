@@ -20,10 +20,14 @@ export const UploadPhotoScreen = () => {
   const { params } =
     useRoute<RouteProp<NavigationParameterList, 'UploadPhoto'>>()
   const { navigate, goBack, popToTop } = useNavigation<NavigationRouteProp>()
+  // TODO: Manage input field state
 
+  // TODO: Use hook return parameters
   const {} = usePhotoUpload()
 
-  const uploadPhoto = async () => {
+  const onUpload = async () => {
+    // TODO: Upload photo (check function types to know which arguments to pass)
+
     // Navigate back to home screen
     navigate('Home', { hasPostedPhoto: true })
   }
@@ -37,9 +41,11 @@ export const UploadPhotoScreen = () => {
         <KeyboardAvoidingView
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         >
+          {/* TODO: Link to input state */}
           <MessageInput placeholder="Tap to add a note" />
         </KeyboardAvoidingView>
-        <UploadButton />
+        {/* TODO: Pass upload progress */}
+        <UploadButton onPress={onUpload} />
       </PageView>
     </ImageBackground>
   )

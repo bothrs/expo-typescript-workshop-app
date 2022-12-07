@@ -1,14 +1,15 @@
 import axios from 'axios'
-import { Buffer } from 'buffer'
 import * as FileSystem from 'expo-file-system'
+import { manipulateAsync, SaveFormat } from 'expo-image-manipulator'
 import { useState } from 'react'
 
+import type { AxiosError } from 'axios'
+
 export const usePhotoUpload = () => {
-  const [isLoading, setIsLoading] = useState(false)
   const [uploadProgress, setUploadProgress] = useState(0)
 
   const uploadPhoto = async (imageUri: string, message: string) => {
-    setIsLoading(true)
+    setUploadProgress(0)
 
     const imageBase64 = await FileSystem.readAsStringAsync(imageUri, {
       encoding: FileSystem.EncodingType.Base64,
@@ -19,7 +20,7 @@ export const usePhotoUpload = () => {
     const fileType = firsCharacterOfBase64 === 'i' ? 'image/png' : 'image/jpg'
 
     const compressedImage = await manipulateAsync(imageUri, [], {
-      compress: 0.8,
+      compress: 0.6,
       format: SaveFormat.JPEG,
     })
 
@@ -41,17 +42,19 @@ export const usePhotoUpload = () => {
         },
         onUploadProgress: (progressEvent) => {
           const progress =
-            (progressEvent.loaded / (progressEvent.total || 0.01)) * 100
+            (progressEvent.loaded / (progressEvent.total || 0.01)) * 99
           setUploadProgress(progress <= 100 && progress >= 0 ? progress : 0)
         },
       })
     } catch (error) {
-      console.log((error as AxiosError).message)
-      console.log('Upload failed')
+      setUploadProgress(0)
+      console.log(
+        'Upload failed:',
+        (error as AxiosError).message,
+        '- Please try again'
+      )
     }
-
-    setIsLoading(false)
   }
 
-  return { uploadPhoto, isLoading, uploadProgress }
+  return { uploadPhoto, uploadProgress }
 }

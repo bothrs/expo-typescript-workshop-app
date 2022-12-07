@@ -1,5 +1,5 @@
-import { useNavigation, useRoute } from '@react-navigation/core'
-import { useEffect, useState } from 'react'
+import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/core'
+import { useState } from 'react'
 
 import { GradientBackground } from '../../../shared/components/gradient-background'
 import { Title } from '../../../shared/components/title'
@@ -14,27 +14,27 @@ import type {
 import type { RouteProp } from '@react-navigation/core'
 
 export const HomeScreen = () => {
+  const { navigate } = useNavigation<NavigationRouteProp>()
+  const { params } = useRoute<RouteProp<NavigationParameterList, 'Home'>>()
+
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
 
-  const { params } = useRoute<RouteProp<NavigationParameterList, 'Home'>>()
-  const { navigate } = useNavigation<NavigationRouteProp>()
-
-  useEffect(() => {
+  useFocusEffect(() => {
     if (params?.hasPostedPhoto) {
-      // Show success message if photo was posted
       setShowSuccessMessage(true)
-
       // Set timeout to hide the message after time
       const timeout = setTimeout(() => {
-        setShowSuccessMessage(false)
-      }, 2000)
+        navigate('Home', undefined)
+      }, 4000)
 
       // Clear timeout if component get's unmounted before time
       return () => {
         clearTimeout(timeout)
       }
+    } else {
+      setShowSuccessMessage(false)
     }
-  }, [params?.hasPostedPhoto])
+  })
 
   const navigateToCamera = () => {
     navigate('Camera')
