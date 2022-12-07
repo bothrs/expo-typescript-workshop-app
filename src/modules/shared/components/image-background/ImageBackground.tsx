@@ -15,7 +15,7 @@ interface Props {
 }
 
 const screenWidth = Dimensions.get('window').width
-const screenHeight = Dimensions.get('window').height
+const screenHeight = Dimensions.get('window').height + 40
 
 export const ImageBackground = ({ children, imageSrc }: Props) => {
   return (

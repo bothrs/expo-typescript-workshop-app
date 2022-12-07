@@ -6,4 +6,7 @@ import { CameraIcon } from '../../../shared/icons/CameraIcon'
 export const StContainer = styled.Pressable``
 
 // TODO: Style icon
-export const StCameraIcon = styled(CameraIcon)``
+export const StCameraIcon = styled(CameraIcon)`
+  // TODO: Change color to proper color
+  color: blue;
+`

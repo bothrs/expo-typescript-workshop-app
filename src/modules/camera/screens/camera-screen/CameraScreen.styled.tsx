@@ -29,5 +29,5 @@ export const StCanvas = styled(Canvas)`
   position: absolute;
   top: -5px;
   left: -5px;
-  border-radius: 50%;
+  border-radius: 25px;
 `

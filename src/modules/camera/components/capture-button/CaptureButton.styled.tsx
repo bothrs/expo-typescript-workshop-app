@@ -23,9 +23,9 @@ export const StCanvas = styled(Canvas)`
   width: 100px;
   height: 100px;
   position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
+  top: 0px;
+  left: 0px;
+  border-radius: 50px;
 `
 
 export const StInnerRing = styled.View`
