@@ -43,7 +43,7 @@ export const HomeScreen = () => {
   return (
     <GradientBackground>
       <StPageView>
-        <Title>{showSuccessMessage ? 'NICE ONE!' : 'ADD POST'}</Title>
+        <Title>{showSuccessMessage ? 'NICE\nONE!' : 'ADD\nPOST'}</Title>
         <CameraButton onPress={navigateToCamera} />
       </StPageView>
     </GradientBackground>
