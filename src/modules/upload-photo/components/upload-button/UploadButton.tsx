@@ -13,7 +13,7 @@ interface Props {
   onPress: (event: GestureResponderEvent) => void
 }
 
-export const UploadButton = ({ style, uploadProgress, onPress }: Props) => {
+export const UploadButton = ({ style, uploadProgress = 0, onPress }: Props) => {
   return (
     <StContainer
       style={style}

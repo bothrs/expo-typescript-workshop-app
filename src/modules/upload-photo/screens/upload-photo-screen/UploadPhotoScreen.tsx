@@ -8,7 +8,7 @@ import { MessageInput } from '../../components/message-input'
 import { UploadButton } from '../../components/upload-button'
 import { usePhotoUpload } from '../../hooks/usePhotoUpload'
 
-import { StSpacing } from './UploadPhotoScreen.styled'
+import { StIconsContainer, StSpacing } from './UploadPhotoScreen.styled'
 
 import type {
   NavigationParameterList,
@@ -35,8 +35,10 @@ export const UploadPhotoScreen = () => {
   return (
     <ImageBackground imageSrc={params.image.uri}>
       <PageView>
-        <PressableIcon icon="cross" onPress={() => popToTop()} />
-        <PressableIcon icon="retry" onPress={() => goBack()} />
+        <StIconsContainer>
+          <PressableIcon icon="cross" onPress={() => popToTop()} />
+          <PressableIcon icon="retry" onPress={() => goBack()} />
+        </StIconsContainer>
         <StSpacing />
         <KeyboardAvoidingView
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
