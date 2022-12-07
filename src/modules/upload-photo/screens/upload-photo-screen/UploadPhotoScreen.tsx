@@ -22,6 +22,9 @@ export const UploadPhotoScreen = () => {
   const { navigate, goBack, popToTop } = useNavigation<NavigationRouteProp>()
   // TODO: Manage input field state
 
+  // The imageUri passed from he previous screen, needed to upload to the backend
+  const imageUri = params.image.uri
+
   // TODO: Use hook return parameters
   const {} = usePhotoUpload()
 

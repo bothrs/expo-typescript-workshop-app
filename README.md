@@ -28,4 +28,26 @@ On your device with Expo GO, use the camera app to scan the QR-code generated in
 
 The build will hot-reload when you make changes. To force a reload, you can press `R` in the console.
 
-## 
+## Work do be done
+
+A lot of the app has been setup already, it's up to you to complete the whole flow by adding some finishing touches.
+
+Each task has some explanation, and the code also has comments in them to make it clear where to make changes.
+
+Any react experience can be translated over to React Native.
+
+### Home screen
+
+- [ ] Style the title to match the designs (`Title.styled.tsx`)
+- [ ] Style the button to match the designs (`CameraButton.styled.tsx`)
+
+### Upload picture screen
+
+The screen component: `UploadPhotoScreen.tsx`
+
+- [ ] Create state to handle input field value
+
+Implement the return values `usePhotoUpload` where needed. (Use the defined types to figure out what to pass where)
+
+- [ ] Use the `uploadPhoto` functions to upload the image and message 
+- [ ] use the `uploadProgress` value and pass it to the button, to properly display the progress
